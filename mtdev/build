@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+mv config.guess config.sub config-aux
+
+./configure \
+    --prefix=/usr \
+    --build=aarch64-linux-musl \
+    --host=aarch64-linux-musl
+
+make
+make DESTDIR="$1" install
