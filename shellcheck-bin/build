@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+install -d "$1/usr/bin"
+install -Dm755 shellcheck "$1/usr/bin/"
