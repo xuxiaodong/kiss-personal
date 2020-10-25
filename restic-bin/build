@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+bunzip2 restic*
+install -d "$1/usr/bin"
+install -Dm755 restic* "$1/usr/bin/restic"
