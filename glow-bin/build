@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+install -d "$1/usr/bin"
+install -m 755 glow "$1/usr/bin"
