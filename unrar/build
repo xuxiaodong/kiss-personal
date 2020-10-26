@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+sed -e 's/^\(CXXFLAGS\)=\(.*\)/\1+=\2/' \
+    -e 's/^\(LDFLAGS\)=\(.*\)/\1+=-lpthread \2/' \
+    -i makefile
+
+make STRIP=: -f makefile
+
+install -d "$1/usr/bin"
+install -Dm755 unrar "$1/usr/bin"
