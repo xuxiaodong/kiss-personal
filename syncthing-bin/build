@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+install -d "$1/usr/bin" "$1/etc/sv/syncthing"
+install -Dm755 syncthing "$1/usr/bin"
+install -Dm755 etc/linux-runit/run "$1/etc/sv/syncthing"
