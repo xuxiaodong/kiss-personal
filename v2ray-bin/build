@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+install -d "$1/etc/v2ray" "$1/usr/bin"
+install -m755 v2ray v2ctl "$1/usr/bin"
+install -m644 *.json *.dat "$1/etc/v2ray"
